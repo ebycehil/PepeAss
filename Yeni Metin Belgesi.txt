@@ -1,0 +1,22 @@
+document.addEventListener("DOMContentLoaded", function() {
+    alert("Welcome to AssPepe! 💩 Prepare for the Meme Revolution!");
+
+    function createShitDrop() {
+        let shit = document.createElement("div");
+        shit.innerHTML = "💩";
+        shit.style.position = "absolute";
+        shit.style.left = Math.random() * window.innerWidth + "px";
+        shit.style.top = "-50px"; 
+        shit.style.fontSize = "30px";
+        shit.style.zIndex = "1000";
+        shit.style.animation = "fall 3s linear";
+
+        document.body.appendChild(shit);
+
+        setTimeout(() => {
+            document.body.removeChild(shit);
+        }, 3000);
+    }
+
+    setInterval(createShitDrop, 1000);
+});
