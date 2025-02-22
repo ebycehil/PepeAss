@@ -1,82 +1,23 @@
-/* Genel Sayfa Tasarımı */
-body {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background: linear-gradient(to right, #141e30, #243b55);
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
-/* Başlık */
-header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-bottom: 3px solid #ffcc00;
-}
-
-/* Bölüm Tasarımı */
-section {
-    margin: 40px auto;
-    padding: 20px;
-    max-width: 800px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    border-left: 5px solid #ffcc00;
-}
-
-/* Bağlantılar */
-a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: bold;
-}
-a:hover {
-    text-decoration: underline;
-}
-
-/* Manifesto Bölümü */
-h2 {
-    color: #ffcc00;
-    font-size: 26px;
-}
-
-/* Bok Düşme Animasyonu */
-@keyframes fall {
-    from { transform: translateY(-50px); }
-    to { transform: translateY(100vh); }
-}
-
-/* Kurbağa Karakteri */
-#asspepeFrog {
+#leftFrog, #rightFrog {
     position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     width: 120px;
-    animation: fart 1.5s infinite alternate;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: bounce 1.5s infinite alternate;
 }
 
-@keyframes fart {
-    0% { transform: translateX(-50%) scale(1); }
-    100% { transform: translateX(-50%) scale(1.1); }
+/* Sol taraftaki kurbağa */
+#leftFrog {
+    left: 10px;
 }
 
-#asspepeFrog {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    border-radius: 10px;
-    animation: fart 1.5s infinite alternate;
+/* Sağ taraftaki kurbağa */
+#rightFrog {
+    right: 10px;
 }
 
-@keyframes fart {
-    0% { transform: translateX(-50%) scale(1); }
-    100% { transform: translateX(-50%) scale(1.1); }
+/* Kurbağalara hafif zıplama efekti */
+@keyframes bounce {
+    0% { transform: translateY(-50%) scale(1); }
+    100% { transform: translateY(-50%) scale(1.1); }
 }
